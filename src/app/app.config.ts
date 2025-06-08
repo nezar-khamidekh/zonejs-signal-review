@@ -2,7 +2,7 @@ import { provideEventPlugins } from '@taiga-ui/event-plugins';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import {
   ApplicationConfig,
-  provideExperimentalZonelessChangeDetection,
+  provideZonelessChangeDetection,
   provideZoneChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
@@ -17,6 +17,6 @@ export const appConfig: ApplicationConfig = {
     // With Zone.js
     provideZoneChangeDetection({ eventCoalescing: true }),
     // Without Zone.js
-    // provideExperimentalZonelessChangeDetection(),
+    // provideZonelessChangeDetection(),
   ],
 };
