@@ -27,7 +27,7 @@ export class CounterComponent {
   protected asyncIncrement(): void {
     setTimeout(() => {
       this.count++;
-      this.cdr.detectChanges();
+      this.cdr.markForCheck();
     });
   }
 }

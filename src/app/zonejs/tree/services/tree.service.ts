@@ -10,7 +10,7 @@ export interface ListItem {
 
 @Injectable({ providedIn: 'root' })
 export class TreeService {
-  private maxDepth = 150;
+  private maxDepth = 300;
   private data: ListItem[] = [];
   private dataSubject = new BehaviorSubject<ListItem[]>([]);
 

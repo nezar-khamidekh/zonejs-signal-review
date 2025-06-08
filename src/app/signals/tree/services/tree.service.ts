@@ -9,7 +9,7 @@ export interface ListItem {
 
 @Injectable({ providedIn: 'root' })
 export class TreeService {
-  private maxDepth = 150;
+  private maxDepth = 300;
 
   private _data = signal<ListItem[]>([]);
 
