@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { User, UsersService } from '../../services/users.service';
+import { User, UsersService } from './services/users.service';
 import { TuiButton } from '@taiga-ui/core';
 import { AsyncPipe } from '@angular/common';
 import { Observable, of } from 'rxjs';
@@ -39,13 +39,12 @@ import { Observable, of } from 'rxjs';
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [UsersService],
 })
 export class TableComponent {
   private readonly usersService = inject(UsersService);
 
   protected users$: Observable<User[]> = of([]);
-
-  protected readonly columns: (keyof User)[] = ['id', 'name', 'surname'];
 
   protected getUsers(): void {
     this.users$ = this.usersService.users$;

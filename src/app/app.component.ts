@@ -10,8 +10,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
       <div class="page-container">
         <div class="navigation">
           <a tuiLink routerLink="">Главная</a>
-          <a tuiLink routerLink="/zonejs/counter">Counter [Zone.js]</a>
-          <a tuiLink routerLink="/signals/counter">Counter [Signal API]</a>
           <a tuiLink routerLink="/zonejs/table">Table [Zone.js]</a>
           <a tuiLink routerLink="/signals/table">Table [Signal API]</a>
           <a tuiLink routerLink="/zonejs/tree">Tree [Zone.js]</a>

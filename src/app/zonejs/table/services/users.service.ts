@@ -7,9 +7,7 @@ export interface User {
   surname: string;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class UsersService {
   private _users: User[] = [];
 
