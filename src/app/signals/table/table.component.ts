@@ -19,7 +19,7 @@ import { User, UsersService } from './services/users.service';
     <button #getUsersButton class="tui-space_right-2" tuiButton>Запросить данные</button>
     <button #addNewUserButton class="tui-space_right-2" tuiButton>Добавить</button>
     <button #removeLastUserButton tuiButton>Удалить</button>
-    @if (users) {
+    @if (users.length) {
       <table class="tui-space_top-4">
         <thead>
           <tr>

@@ -44,7 +44,7 @@ import { Observable, of } from 'rxjs';
 export class TableComponent {
   private readonly usersService = inject(UsersService);
 
-  protected users$: Observable<User[]> = of([]);
+  protected users$!: Observable<User[]>;
 
   protected getUsers(): void {
     this.users$ = this.usersService.users$;
